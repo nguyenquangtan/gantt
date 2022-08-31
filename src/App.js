@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Router, Switch, Route, Link} from 'react-router-dom';
-import History from './History';
+import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Project from './Project';
 import Task from './Task';
 
@@ -10,7 +9,7 @@ class App extends Component {
             window.location.reload();
         }
         return(
-            <Router history={History} forceRefresh={true}>
+            <Router forceRefresh={true}>
                 <Switch>
                     <Route exact path='/' component={Project} />
                     <Route path='/task' component={Task} />
